@@ -1,0 +1,291 @@
+.vuivui-cart
+	background: darken($white,5%)
+	padding: 60px 0
+	.cart-title
+		+fs(18rem)
+		text-transform: uppercase
+		font-weight: 600
+		margin-bottom: 20px
+	.cart-step
+		background: $white
+		padding: 30px
+		height: 100%
+		+media-breakpoint-down(sm)
+			padding: 15px
+	.cart-table
+		margin-bottom: 20px
+		.cart-item
+			border-bottom: 1px solid darken($white,10%)
+			padding: 15px 0
+			figure
+				+flexbox
+				.item-img
+					+flexbox
+					justify-content: center
+					align-items: center
+					width: 80px
+					height: 80px
+					// border: 1px solid darken($white,10%)
+					+media-breakpoint-down(sm)
+						width: 60px
+						height: 60px
+					img
+						max-width: 80%
+						max-height: 80%
+				figcaption
+					+flexbox
+					justify-content: space-between
+					width: calc(100% - 80px)
+					padding-left: 30px
+					+pos(rel,null)
+					+media-breakpoint-down(sm)
+						// flex-wrap: wrap
+						padding-left: 20px
+						width: calc(100% - 60px)
+					.item-info
+						+media-breakpoint-down(sm)
+							// width: 100%
+						.item-name
+							+fs(18rem)
+							font-weight: 600
+							margin-bottom: 10px
+							+media-breakpoint-down(sm)
+								+fs(14rem)
+								padding-right: 5px
+						.item-amount
+							+fs(14rem)
+							+flexbox
+							align-items: center
+							align-content: center
+							input
+								width: 50px
+								text-align: center
+								border: 1px solid darken($white,10%)
+								padding: 0px
+								line-height: 30px
+								margin-left: 10px
+					.item-price
+						text-align: right
+						+media-breakpoint-down(sm)
+							// width: 100%
+						.new
+							font-weight: 500
+							color: $bluegrey
+						.old
+							+fs(14rem)
+							font-style: italic
+							color: darken($white,40%)
+							text-decoration: line-through
+					.item-remove
+						+fs(13rem)
+						color: darken($white,40%)
+						cursor: pointer
+						&:hover
+							color: lighten($red,10%)
+	.cart-fee
+		.group
+			+flexbox
+			align-items: center
+			align-content: center
+			flex-wrap: wrap
+			padding: 5px 0
+			.label
+				width: 60%
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: flex-end
+				color: darken($white,40%)
+				+media-breakpoint-down(sm)
+					width: 40%
+			.input-coupon
+				color: lighten($green,20%)
+				margin-right: 30px
+				flex: auto
+				+media-breakpoint-down(sm)
+					display: block
+					width: 100%
+					margin-right: 0
+					text-align: right
+					margin-bottom: 10px
+				&:before
+					content: '+'
+					margin-right: 10px
+				&:hover
+						color: $yellow
+				+ .label
+					width: auto
+					+media-breakpoint-down(sm)
+						width: 40%
+			.value
+				width: 40%
+				text-align: right
+				+media-breakpoint-down(sm)
+					width: 60%
+				.old
+					text-decoration: line-through
+					font-style: italic
+					margin-right: 10px
+					color: darken($white,40%)
+			&.total
+				border-top: 1px solid darken($white,5%)
+				margin-top: 10px
+				padding-top: 10px
+				.value
+					color: $red
+					+fs(18rem)
+					font-weight: 500
+	.btn-vvcartwrap
+		padding: 20px 0
+		+flexbox
+		flex-wrap: wrap
+		.btn-buymore
+			+fs(16rem)
+			display: inline-block
+			line-height: 40px
+			background: $bluegrey
+			color: $white
+			padding: 0px 20px
+			.material-icons
+				vertical-align: middle
+				line-height: 1
+				margin-top: -3px
+				margin-right: 5px
+			&:hover
+				background: $main
+		.btn-order
+			display: block
+			line-height: 50px
+			text-align: center
+			color: $white
+			font-weight: 500
+			text-transform: uppercase
+			background: $green
+			display: inline-block
+			padding: 0px 60px
+			+media-breakpoint-down(sm)
+				width: 100%
+				text-align: center
+			&:after
+				content: '\f101'
+				margin-left: 10px
+			&:hover
+				background: $yellow
+				color: $green
+		.btn-orderlist
+			width: 100%
+			text-align: center
+			color: darken($white,60%)
+			+fs(15rem)
+			padding: 10px 0
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.cart-step2
+		pointer-events: none
+		> *
+			opacity: 0.3
+		&.active
+			pointer-events: all
+			> *
+				opacity: 1
+	.get-oldaddress
+		text-align: center
+		display: block
+		color: lighten($green,20%)
+		border-bottom: 1px solid darken($white,10%)
+		padding-bottom: 15px
+		margin-bottom: 15px
+		.material-icons
+			vertical-align: middle
+			margin-top: -3px
+		&:hover
+			color: $yellow
+	
+	.cart-info
+		.form-wrap
+			margin-bottom: 30px
+			.form-group
+			ul.radio
+				li
+					display: inline-block
+					margin-right: 20px
+			.form-bill
+				display: none
+				margin-bottom: 20px
+				border: 1px solid darken($white,10%)
+				padding: 30px 30px 15px
+				background: darken($white,2%)
+		.cart-method
+			.method
+				background: darken($white,3%)
+				text-align: center
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				height: 80px
+				+fs(14rem)
+				background: $green
+				color: $white
+				text-transform: uppercase
+				font-weight: 600
+				margin-bottom: 10px
+				flex-wrap: wrap
+				.des
+					+fs(12rem)
+					width: 100%
+					line-height: 1
+					color: darken($white,40%)
+				&:hover
+					background: $yellow
+					color: $green
+	
+	.cart-step3
+	.cart-finish
+		margin-bottom: 0px
+	.finish-notification
+		display: block
+		text-align: center
+		font-weight: 600
+		+fs(24rem)
+		color: lighten($green,20%)
+		margin-bottom: 10px
+		.material-icons
+			+fs(48rem)
+			vertical-align: middle
+			margin-right: 5px
+		&.success
+			// color: #155724
+			// background-color: #d4edda
+			// border-color: #c3e6cb
+	.cart-thankyou
+		text-align: center
+		margin-bottom: 20px
+	.shipping-info
+		max-width: 500px
+		border: 1px solid $yellow
+		background: lighten($yellow,40%)
+		padding: 15px
+		margin: 0 auto 10px
+		.module-title
+			+fs(15rem)
+			font-weight: 600
+			margin-bottom: 10px
+		ul
+			+fs(14rem)
+			list-style-type: disc
+			padding-left: 20px
+			color: darken($white,60%)
+	.shipping-des
+		max-width: 500px
+		margin: 0 auto 0px
+		+fs(14rem)
+		font-style: italic
+		text-align: center
+		color: lighten($red,10%)
+	.shipping-time
+		text-align: center
+		margin-bottom: 10px
+		strong
+			color: lighten($green,20%)

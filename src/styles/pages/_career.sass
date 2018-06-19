@@ -1,0 +1,76 @@
+.career-intro
+	padding: 60px 0
+	.content
+		max-width: 1040px
+		margin: 0 auto
+.career-motto
+	+pos(rel,null)
+	padding: 60px 0
+	.about-title
+		+pos(rel,null)
+		z-index: 1
+	.motto-list
+		+pos(rel,null)
+		padding-top: 20px
+		z-index: 1
+		.motto-col
+			text-align: center
+			margin-bottom: 20px
+			.icon
+				display: inline-block
+				margin-bottom: 15px
+			.name
+				+fs(15rem)
+				color: $white
+.career-album
+	padding-top: 60px
+	.album-list
+		.row
+			margin: 0px -2px
+			.col-12
+				padding: 0px 2px
+		.img
+			display: block
+			height: 370px
+.career-page
+	padding: 60px 0
+	.job-list
+		.job
+			border-bottom: 1px solid darken($white,10%)
+			.job-title
+				+flexbox
+				padding: 20px 0
+				cursor: pointer
+				.number
+					+fs(30rem)
+					font-weight: 700
+					color: darken($white,40%)
+					width: 40px
+				.name
+					flex: auto
+					+fs(22rem)
+					font-weight: 700
+					text-transform: uppercase
+				.date
+					width: 100px
+					+fs(18rem)
+					text-align: right
+			.job-content
+				display: none
+				padding: 20px 15px 20px 40px
+				.content
+					margin-bottom: 30px
+					+fs(18rem)
+				.btn-apply
+					color: $white 
+					padding: 0px 40px
+					+bor-rad(5px)
+					line-height: 40px
+					+fs(15rem)
+					background: $green
+					display: inline-block
+					text-transform: uppercase
+			&.active
+				.job-title
+					.name
+						color: lighten($green,20%)

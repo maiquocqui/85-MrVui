@@ -1,0 +1,18 @@
+.breadcrumb-wrap
+	margin-bottom: 30px
+	background: darken($white,8%)
+	.breadcrumb
+		background: none
+		+flexbox
+		justify-content: flex-end
+		color: darken($white,60%)
+		li
+			&:before
+				content: '\f105'
+				margin: 0px 10px
+			&:first-child
+				&:before
+					display: none
+			a
+				+fs(13rem)
+				color: darken($white,60%)

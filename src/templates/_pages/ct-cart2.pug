@@ -1,0 +1,84 @@
+.vuivui-cart
+	.container.full-width
+		.row.justify-content-center
+			.col-12.col-lg-8
+				section.cart-step.cart-step3
+					.cart-finish
+						.finish-notification.success <i class="material-icons">check_circle</i> Đặt hàng thành công
+						.cart-thankyou Cảm ơn quý khách đã đặt mua sản phẩm tại 
+							strong Mr.Vui.
+						.shipping-info
+							.module-title Thông tin giao hàng:
+							ul
+								li 156 Nguyễn Văn Thủ, Q.1, TP.Hồ Chí Minh
+								li Thanh toán khi nhận hàng
+								li Điện thoại: 0981 123 123
+						//- .shipping-des Mr.Vui sẽ nhắn tin hoặc gọi điện xác nhận đơn hàng trong 15 phút.
+						.btn-vvcartwrap.justify-content-center
+							a.btn-order(href="#!") Về trang chủ
+							a.btn-orderlist(href="#!") Quản lý đơn hàng
+					.cart-title.text-center Danh sách sản phẩm
+					.shipping-time Thời gian giao hàng 
+						strong Từ 12h-17h ngày 19/05/2018
+					.cart-table
+						.cart-item
+							figure
+								a.item-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									.item-info
+										.item-name Balo học sinh - DLX4
+										.item-amount Số lượng
+											input(type="number", name="" value="1")
+									.item-price
+										.new 500.000đ
+										.old 800.000đ
+									.item-remove Xóa
+						.cart-item
+							figure
+								a.item-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									.item-info
+										.item-name Balo học sinh - DLX4
+										.item-amount Số lượng
+											input(type="number", name="" value="1")
+									.item-price
+										.new 500.000đ
+										.old 800.000đ
+									.item-remove Xóa
+					.row
+						.col-12.col-md-6
+						.col-12.col-md-6
+							.cart-fee
+								.group
+									.label Tiền hàng:
+									.value 1.000.000đ
+								.group
+									.label Phí giao hàng:
+									.value
+										span.old 10.000đ
+										span.new Miễn phí
+								.group.total
+									.label 
+										//- a.input-coupon(href="#!" data-toggle="modal" data-target="#modalCoupon") Nhập mã giảm giá
+										|Tổng tiền:
+									.value 1.000.000đ
+
+
+<!-- Modal -->
+
+#modalCoupon.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalCounponLabel', aria-hidden='true')
+	.modal-dialog.modal-coupon(role='document')
+		.modal-content
+			.modal-header
+				.close(data-dismiss='modal', aria-label='Close') <i class="material-icons">close</i>
+			.modal-body
+				.form-wrap
+					.form-group
+						input(type="text" placeholder="Nhập mã giảm giá")
+					.form-group
+						input(type="text" placeholder="Nhập số điện thoại")
+					.frm-btn
+						input(type="submit", value="Đồng ý")
+						input(type="reset", value="Hủy")

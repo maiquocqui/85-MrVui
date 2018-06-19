@@ -1,0 +1,173 @@
+// USER SIDEBAR
+
+.user-page
+	margin-bottom: 0
+	// .row
+	// 	margin: 0px -5px
+	// .col-xs-12
+	// 	padding: 0px 5px
+.user-sidebar
+	+pos(rel,null)
+	margin-top: 0
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		&:after
+			content: '\f107'
+			font-family: 'fontawesome'
+			+pos(abs, 50% 15px null null)
+			+transform(translateY(-50%))
+			color: $black
+			+fs(24rem)
+	.userinfo
+		// border: 1px solid darken($white,10%)
+		background: $bluegrey
+		+bor-rad(0)
+		overflow: hidden
+		figure
+			+flexbox
+			flex-wrap: wrap
+			&:after
+				content: ''
+				display: table
+				width: 100%
+				clear: both
+			.user-img
+				display: none
+				width: 80px
+				float: left
+				padding: 15px
+				+media-breakpoint-down(lg)
+					width: 60px
+			figcaption
+				// width: calc(100% - 80px)
+				+flexbox
+				flex-wrap: wrap
+				align-items: center
+				align-content: center
+				padding: 10px 20px
+				.title
+					color: $white
+					opacity: 0.8
+					font-weight: 500
+					+fs(12rem)
+					width: 100%
+					// margin-bottom: 5px
+				.user-name
+					text-transform: uppercase
+					font-weight: 600
+					// +fs(16rem)
+					+fs(16rem)
+					color: $white
+					width: 100%
+				.user-rank
+					display: none
+					+fs(13rem)
+					font-weight: 500
+					color: color-rgba($white,0.8)
+					.fa 
+						color: $amber
+						// margin-right: 5px
+						+fs(16rem)
+		.btn-muasi
+			margin: 0px 15px 15px
+			display: block
+			background: darken($white,10%)
+			text-align: center
+			text-transform: uppercase
+			color: $main
+			background: $white
+			font-weight: 700
+			+bor-rad(5)
+			padding: 5px 0
+.user-sidelink
+	margin-bottom: 30px
+	ul 
+		background: darken($white,3%)
+		li
+			display: block
+			border-bottom: 1px solid $white
+			&:before
+				display: none
+			&:last-child
+				border-bottom: none
+			a
+				display: block
+				padding: 9px 20px
+				color: $main
+				+fs(14rem)
+				&:hover
+					background: color-rgba($black,0.05)
+					color: $green
+			&.active
+				a
+					color: $white
+					font-weight: 600
+					background: $green
+
+.cart-page
+	.home-title
+		margin-bottom: 20px
+	.product-select
+		margin-bottom: 10px
+		select
+			display: inline-block
+			width: auto
+			@extend .form-control
+	.table-muasi
+		+bor-rad(5px)
+		overflow: hidden
+		border: 1px solid $main
+		margin-bottom: 20px
+		th
+			background: $main
+			color: $white
+		th,td
+			padding: 15px
+			vertical-align: middle
+			&:last-child
+				text-align: right
+		td
+			border-bottom: 1px solid darken($white,10%)
+		tr
+			&:last-child
+				td
+					border-bottom: none
+		.product
+			display: inline-block
+			figure
+				+flexbox
+				// padding: 10px
+				// background: darken($white,5%)
+				width: 300px
+				.product-img
+					width: 70px
+					height: 70px
+					background: $white
+					+flexbox
+					justify-content: center
+					align-items: center
+					border: 1px solid darken($white,10%)
+					img
+						max-width: 80%
+						max-height: 80%
+				figcaption
+					width: calc(100% - 70px)
+					padding: 10px 0
+					padding-left: 15px
+					.product-name
+						+fs(15rem)
+						line-height: 1
+						text-transform: uppercase
+						font-weight: 500
+						color: $main
+					.product-id
+						+fs(12rem)
+						color: darken($white,60%)
+		.total
+			+fs(16rem)
+			font-weight: 600
+			color: $bluegrey
+	.totalmoney
+		strong
+			+fs(24rem)
+			color: $red

@@ -1,0 +1,8 @@
+.form-wrap
+	.form-group
+		input, select, textarea
+			@extend .form-control
+			+fs(14rem)
+			&:focus
+				box-shadow: 0 0 0 0.2rem color-rgba($green,0.2)
+				border-color: lighten($green,20%)

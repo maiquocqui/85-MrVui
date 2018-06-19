@@ -1,0 +1,50 @@
+
+.fly-tool
+	+pos(fix, 50% 10px null null)
+	+transform(translateY(-50%))
+	z-index: 5
+	background: $white
+	.social
+		a
+			width: 46px
+			height: 46px
+			+flexbox
+			justify-content: center
+			align-items: center
+			align-content: center
+			color: $white
+			+fs(18rem)
+			&.fa-facebook
+				background: $facebook
+			&.fa-twitter
+				background: $twitter
+			&.fa-youtube-play
+				background: $youtube
+			&:hover
+				filter: brightness(120%)
+	> a
+		width: 46px
+		height: 46px
+		+flexbox
+		justify-content: center
+		align-items: center
+		align-content: center
+		background: $yellow
+		color: darken($white,60%)
+		+pos(rel,null)
+		&:before
+			content: ''
+			height: 1px
+			background: color-rgba($black,0.1)
+			+pos(abs, null 5px -1px 5px)
+			z-index: 1
+		&:last-child
+			&:before
+				display: none
+		.material-icons
+			font-size: 18px
+			+transition(all,0s)
+		&:hover
+			color: $white
+			border-color: $green
+			background: $green

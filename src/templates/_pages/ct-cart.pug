@@ -1,0 +1,138 @@
+.vuivui-cart
+	.container.full-width
+		.row
+			.col-12.col-xl-8
+				section.cart-step.cart-step1.active
+					.cart-table
+						.cart-item
+							figure
+								a.item-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									.item-info
+										.item-name Balo học sinh - DLX4
+										.item-amount Số lượng
+											input(type="number", name="" value="1")
+										.item-remove Xóa
+									.item-price
+										.new 500.000đ
+										.old 800.000đ
+						.cart-item
+							figure
+								a.item-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									.item-info
+										.item-name Balo học sinh - DLX4
+										.item-amount Số lượng
+											input(type="number", name="" value="1")
+										.item-remove Xóa
+									.item-price
+										.new 500.000đ
+										.old 800.000đ
+					.row
+						.col-12.col-md-3.col-xl-4
+							.btn-vvcartwrap.justify-content-start
+								a.btn-buymore(href="#!") <i class="material-icons">add</i>Mua thêm
+						.col-12.col-md-9.col-xl-8
+							.cart-fee
+								.group
+									.label Tiền hàng:
+									.value 1.000.000đ
+								.group
+									.label Phí giao hàng:
+									.value
+										span.old 10.000đ
+										span.new Miễn phí
+								.group.total
+									a.input-coupon(href="#!" data-toggle="modal" data-target="#modalCoupon") Nhập mã giảm giá
+									.label Tổng tiền:
+									.value 1.000.000đ
+							.btn-vvcartwrap.justify-content-end
+								a.btn-order(href="#!") Đặt hàng
+			.col-12.col-xl-4
+				section.cart-step.cart-step2
+					a.get-oldaddress(href="#!") <i class="material-icons">find_in_page</i> Lấy lại địa chỉ lần mua trước
+					.cart-info
+						.cart-title.text-center Nhập thông tin mua hàng
+						.form-wrap
+							.form-row
+								.form-group.col-5
+									select
+										option(value="") --Chọn Tỉnh/Thành--
+								.form-group.col-7
+									select
+										option(value="") --Chọn Quận/Huyện--
+							.form-group
+								input(type="text" placeholder="Nhập địa chỉ")
+							.form-group
+								ul.radio
+									li
+										input#male(type="radio", name="gender" checked)
+										label(for="male") Anh
+									li
+										input#female(type="radio", name="gender")
+										label(for="female") Chị
+							.form-group
+								input(type="text" placeholder="Họ và tên")
+							.form-group
+								input(type="text" placeholder="Số điện thoại")
+							.form-group
+								input(type="text" placeholder="Email")
+						.cart-title.text-center Chọn thời gian nhận hàng
+						.form-wrap
+							.form-row
+								.form-group.col-6
+									select
+										option Hôm nay (08/05)
+								.form-group.col-6
+									select
+										option Từ 17h-21h
+							.form-group
+								ul.checkbox
+									li
+										input#check1(type="checkbox", name="cb1")
+										label(for="check1") Gọi trước khi giao
+									li
+										input#check2(type="checkbox", name="cb1")
+										label.btn-exportbill(for="check2") Xuất hóa đơn công ty
+							.form-bill
+								.form-group
+									input(type="text" placeholder="Nhập tên công ty")
+								.form-group
+									input(type="text" placeholder="Nhập địa chỉ công ty")
+								.form-group
+									input(type="text" placeholder="Nhập mã số thuế")
+							.form-group
+								textarea(name="", cols="30", rows="3" placeholder="Ghi chú thêm (nếu có)")
+						.cart-title.text-center Phương thức thanh toán
+						.cart-method
+							.row
+								.col-12.col-sm-6
+									a.method(href="#!") Trả tiền mặt tại nhà
+								.col-12.col-sm-6
+									a.method(href="#!") Cà thẻ tại nhà
+								.col-12.col-sm-6
+									a.method(href="#!") Thanh toán ngay
+										.des Bằng thẻ ATM
+								.col-12.col-sm-6
+									a.method(href="#!") Thanh toán ngay
+										.des (thẻ Visa, Master Card)
+
+
+<!-- Modal -->
+
+#modalCoupon.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalCounponLabel', aria-hidden='true')
+	.modal-dialog.modal-coupon(role='document')
+		.modal-content
+			.modal-header Nhập mã giảm giá
+				.close(data-dismiss='modal', aria-label='Close') <i class="material-icons">close</i>
+			.modal-body
+				.form-wrap
+					.form-group
+						input(type="text" placeholder="Nhập mã giảm giá")
+					.form-group
+						input(type="text" placeholder="Nhập số điện thoại")
+					.frm-btn
+						input(type="submit", value="Đồng ý")
+						input(type="reset", value="Hủy")

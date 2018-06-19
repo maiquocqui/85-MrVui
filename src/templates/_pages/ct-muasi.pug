@@ -1,0 +1,151 @@
+.container.full-width
+	.row.flex.flex-wrap
+		.col-12
+			section.cartstep.clearfix
+				.step.active
+					.number 1
+					.name Giỏ hàng
+				.step
+					.number 2
+					.name Thông tin
+				.step
+					.number 3
+					.name Thanh toán
+.container.full-width
+	.row.flex.flex-wrap
+		.col-12.col-lg-3
+			section.user-sidebar.clearfix
+				.userinfo.clearfix
+					figure
+						a.user-img(href="#")
+							img(src="img/user.png", alt="")
+						figcaption
+							.title Tài khoản của
+							.user-name Siêu thị B
+							//- .user-rank <i class="fa fa-trophy" aria-hidden="true"></i> Thành viên vàng
+					a.btn-muasi(href="#") Đặt mua sỉ
+			nav.user-sidelink.clearfix
+				ul 
+					li
+						a(href="#!") Thông tin chung
+					li
+						a(href="#!") Thông tin tài khoản
+					li
+						a(href="#!") Số địa chỉ
+					//- li.hvr-sweep-to-right
+						//- a(href="#") Thông báo của tôi
+					li
+						a(href="#!") Đơn hàng của tôi
+					li
+						a(href="#!") Danh sách yêu thích
+					//- li.hvr-sweep-to-right
+						a(href="userpanel5.html") Quản lý điểm thưởng
+		.col-12.col-lg-9
+			section.cart-page.clearfix
+				h1.home-title Đặt mua sỉ
+				section.cart-history.clearfix
+					//- h2.posttitle Các đơn hàng vừa đặt
+					//- a.link(href="userpanel3.html") Xem tất cả
+					.product-select
+						select
+							option Tất cả sản phẩm
+							option Thực phẩm tươi
+							option Thực phẩm chế biến
+							option Xúc xích
+							option Thủy sản chế biến
+					.table-responsive
+						table.table-muasi
+							thead
+								tr 
+									th Sản phẩm
+									th Đơn giá
+									th Số lượng
+									th Tổng tiền
+							tbody
+								tr 
+									td 
+										a.product(href="#!")
+											figure
+												.product-img
+													img(src="img/product/1.png", alt="")
+												figcaption
+													.product-name Balo học sinh
+													.product-id SKQ-3153
+									td 100.000đ
+									td 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text", value="1")
+											.btn-spin.btn-inc +
+									td.total 100.000đ
+								tr 
+									td 
+										a.product(href="#!")
+											figure
+												.product-img
+													img(src="img/product/1.png", alt="")
+												figcaption
+													.product-name Balo học sinh
+													.product-id SKQ-3153
+									td 100.000đ
+									td 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text", value="1")
+											.btn-spin.btn-inc +
+									td.total 100.000đ
+								tr 
+									td 
+										a.product(href="#!")
+											figure
+												.product-img
+													img(src="img/product/1.png", alt="")
+												figcaption
+													.product-name Balo học sinh
+													.product-id SKQ-3153
+									td 100.000đ
+									td 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text", value="1")
+											.btn-spin.btn-inc +
+									td.total 100.000đ
+								tr  
+									td 
+										a.product(href="#!")
+											figure
+												.product-img
+													img(src="img/product/1.png", alt="")
+												figcaption
+													.product-name Balo học sinh
+													.product-id SKQ-3153
+									td 100.000đ
+									td 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text", value="1")
+											.btn-spin.btn-inc +
+									td.total 100.000đ
+								tr 
+									td 
+										a.product(href="#!")
+											figure
+												.product-img
+													img(src="img/product/1.png", alt="")
+												figcaption
+													.product-name Balo học sinh
+													.product-id SKQ-3153
+									td 100.000đ
+									td 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text", value="1")
+											.btn-spin.btn-inc +
+									td.total 100.000đ
+						.text-right
+							.totalmoney Thành tiền: 
+								strong 1.000.000đ
+							.payment-des Giá đã bao gồm VAT
+					.btnwrap.clearfix
+						a.btn-back(href="index.html") Về trang chủ
+						a.hvr-sweep-to-right.btn-continue(href="#") Tiến hành thanh toán

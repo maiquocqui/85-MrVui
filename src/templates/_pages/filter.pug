@@ -1,0 +1,131 @@
+.col-left.filter-col
+	.filter-wrap.category-group
+		.filter-group
+			.filter-title 
+				span Danh mục sản phẩm
+			.filter-option
+				nav.filter-category
+					ul
+						li.hassub.active
+							a(href="#") Trẻ em
+							.btn-showsubfilter <i class="fa fa-angle-down"></i>
+							.sub
+								ul
+									li
+										a(href="#!") Bé trai
+									li
+										a(href="#!") Bé gái
+						li
+							a(href="#") Công sở
+						li.hassub
+							a(href="#") Du lịch
+						li
+							a(href="#") Thời trang
+						li
+							a(href="#") Phụ kiện
+		.btn-closefilter.btn-close <span class="lnr lnr-cross"></span> Đóng bộ lọc
+	.filter-wrap.option-group
+		//- .filter-group
+			.filter-title 
+				span Thương hiệu
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option
+				nav.filter-ajax.brand-category
+					ul
+						li
+							a(href="#") SEIKO
+						li
+							a(href="#") Polo
+						li
+							a.active(href="#") CITIZEN
+						li
+							a(href="#") Ogival
+						li
+							a(href="#") Cloude bernard
+						li
+							a(href="#") TISSOT
+						li
+							a(href="#") LE CHATEAU
+						li
+							a(href="#") SKAGEN
+						li
+							a.active(href="#") Sunrise
+						li
+							a(href="#") ORIENT
+						li
+							a(href="#") Calvin Klein
+		.filter-group
+			.filter-title 
+				span Mức giá
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option
+				.price-select
+					select
+						option -- Lọc khoảng giá --
+						option Dưới 2 triệu
+						option 2 - 5 triệu
+						option 5 - 10 triệu
+						option 10 - 20 triệu
+						option 20 - 50 triệu
+						option Trên 50 triệu
+		.filter-group
+			.filter-title 
+				span Theo hình ảnh
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option
+				nav.filter-ajax
+					ul
+						li
+							a.active(href="#") Không hình
+						li
+							a(href="#") Doraemon
+						li
+							a(href="#") TElsa
+						//- li
+							a.active(href="#") Thời trang
+						li
+							a(href="#") Quân đội
+						li
+							a(href="#") Khác
+		.filter-group
+			.filter-title 
+				span Theo độ tuổi
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option
+				nav.filter-ajax
+					ul
+						li
+							a.active(href="#") Mầm non
+						li
+							a(href="#") Tiểu học
+						li
+							a(href="#") Trung học
+						li
+							a(href="#") Trưởng thành
+		.filter-group
+			.filter-title
+				span Màu sắc
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option
+				ul.color-picker
+					li.color
+						a.active(href="#!")
+							.color-img(style='background-color:#000')
+							.color-name Đen
+					li.color
+						a(href="#!")
+							.color-img(style='background-color:#fff')
+							.color-name Trắng
+					li.color
+						a(href="#!")
+							.color-img(style='background-color:#ff0')
+							.color-name Vàng
+					li.color
+						a(href="#!")
+							.color-img(style='background-color:#00f')
+							.color-name Lam
+					li.color
+						a(href="#!")
+							.color-img(style='background-color:#eee')
+							.color-name khác
+		.btn-closefilter.btn-close <span class="lnr lnr-cross"></span> Đóng bộ lọc

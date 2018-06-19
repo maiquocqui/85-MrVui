@@ -1,0 +1,256 @@
+.page-banner
+
+.col-left
+	padding: 0px 15px
+	width: 300px
+.col-main
+	padding: 0px 15px
+	width: calc(100% - 300px)
+
+.product-page
+	.category-info
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		margin-bottom: 30px
+		.cate-name
+			+fs(36rem)
+			font-weight: 700
+			text-transform: capitalize
+			line-height: 1.3
+			.amount
+				+fs(13rem)
+				color: darken($white,40%)
+		.col-right
+			+flexbox
+			align-items: center
+			align-content: center
+		.change-view
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(13rem)
+			font-weight: 700
+			color: darken($white,60%)
+			text-transform: uppercase
+			a
+				display: block
+				width: 30px
+				height: 30px
+				line-height: 30px
+				text-align: center
+				color: $main
+				margin-left: 5px
+				cursor: pointer
+				&:hover
+					color: $green
+				&.active
+					font-weight: 700
+					background: darken($white,5%)
+		.product-sort
+			border-left: 1px solid darken($white,10%)
+			padding-left: 15px
+			margin-left: 15px
+			select
+				border: none
+				+fs(13rem)
+				font-weight: 700
+				color: darken($white,60%)
+				text-transform: uppercase
+				cursor: pointer
+				&:hover
+					color: $black
+
+.product-list
+	article
+		margin-bottom: 40px
+
+.product-col
+	figure
+		.product-img
+			+flexbox
+			justify-content: center
+			align-items: center
+			align-items: center
+			// background: darken($white,4%)
+			border: 1px solid darken($white,10%)
+			margin-bottom: 15px
+			padding: 30px
+			img
+				width: 100%
+				// max-width: 70%
+				// max-height: 70%
+				+transition(all,0.5s)
+		figcaption
+			+flexbox
+			flex-wrap: wrap
+			justify-content: space-between
+			overflow: hidden
+			+pos(rel,null)
+			.product-intro
+				width: 100%
+			.product-cate
+				+fs(15rem)
+				color: darken($white,40%)
+				display: none
+			.product-name
+				color: $main
+				+fs(16rem)
+				font-weight: 600
+				text-transform: uppercase
+				width: 100%
+				// margin-bottom: 10px
+				a
+					color: inherit
+			.product-price
+				+transition(all,0.5s)
+				+flexbox
+				align-items: flex-end
+				align-content: flex-end
+				.old
+					+fs(10rem)
+					color: darken($white,40%)
+					text-decoration: line-through
+					order: 2
+					line-height: 1
+					font-style: italic
+					margin-bottom: 2px
+				.new
+					+fs(16rem)
+					// font-weight: 600
+					color: $bluegrey
+					margin-right: 10px
+					line-height: 1
+			.buy-wrap
+				+pos(abs, 0 null 0 0)
+				+transform(translateX(-100%))
+				width: 150px
+				+flexbox
+				align-items: center
+				align-content: center
+				background: $white
+				visibility: hidden
+				opacity: 0
+				+transition(all,0.5s)
+				.btn-buy
+					display: inline-block
+					line-height: 36px
+					padding: 0px 20px
+					+fs(13rem)
+					text-transform: uppercase
+					color: $white
+					background: $green
+					&:before
+						content: '\f290'
+						margin-right: 10px
+					&:hover
+						background: $yellow
+						color: $main
+		&:hover
+			.product-img
+				img
+					+transform(scale3d(1.1,1.1,1))
+			figcaption
+				.product-intro, .product-price
+					visibility: hidden
+					opacity: 0
+				.buy-wrap
+					+transform(translateX(0%))
+					visibility: visible
+					opacity: 1
+.col-lg-6
+	figure
+		figcaption
+			.product-name
+				+fs(18rem)
+
+.pages
+	margin: 0 0px 40px
+	ul.pagination
+		+flexbox
+		li
+			+ li
+				margin-left: 10px
+			a
+				display: block
+				width: 40px
+				height: 40px
+				line-height: 40px
+				text-align: center
+				+fs(13rem)
+				font-weight: 600
+				border: 1px solid darken($white,10%)
+			&:hover
+				a
+					color: lighten($green,20%)
+			&.active
+				a
+					background: $green
+					color: $white
+					border-color: $green
+
+.sidebar-product
+	.small-title
+		margin-bottom: 20px
+	.product-list
+		.product
+			padding-bottom: 15px
+			margin-bottom: 15px
+			border-bottom: 1px dashed darken($white,10%)
+			figure
+				+flexbox
+				.product-img
+					width: 80px
+					height: 80px
+					+flexbox
+					justify-content: center
+					align-content: center
+					align-items: center
+					background: darken($white,4%)
+					img
+						max-width: 70%
+						max-height: 70%
+				figcaption
+					width: calc(100% - 80px)
+					padding: 10px 0
+					padding-left: 15px
+					.product-name
+						+fs(14rem)
+						font-weight: 700
+						text-transform: uppercase
+						line-height: 1.2
+						margin-bottom: 5px
+						a
+							line-height: 1.2
+							&:hover
+								color: lighten($green,20%)
+					.product-price
+						+flexbox
+						align-items: flex-end
+						align-content: flex-end
+						margin-bottom: 5px
+						.new
+							+fs(16rem)
+							font-weight: 700
+							color: $red
+							line-height: 1
+						.old
+							+fs(13rem)
+							line-height: 1
+							color: darken($white,40%)
+							font-style: italic
+							text-decoration: line-through
+							margin-left: 10px
+					.link
+						+fs(12rem)
+						font-weight: 600
+						color: $white
+						// +bor-rad(3px)
+						background: $green
+						padding: 2px 5px
+						&:hover
+							background: $yellow
+						&:before
+							content: '\f07a'
+							margin-right: 5px

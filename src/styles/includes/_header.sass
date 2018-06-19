@@ -1,0 +1,272 @@
+body
+	padding-top: 90px
+	+media-breakpoint-down(lg)
+		padding-top: 60px
+header
+	background: $green
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	.header-wrap
+		+flexbox
+		justify-content: space-between
+		+media-breakpoint-down(sm)
+			justify-content: flex-start
+	.sitelogo
+		height: 90px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+media-breakpoint-down(lg)
+			height: 60px
+			margin-left: 15px
+			// +pos(abs, 0 null null 50%)
+			// +transform(translateX(-50%))
+		a
+			display: block
+		img
+			height: 60px
+			+media-breakpoint-down(lg)
+				height: 40px
+	.btn-showmenu
+		display: none
+		+media-breakpoint-down(lg)
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			+fs(22rem)
+			color: $white
+			height: 60px
+			+bor-rad(3px)
+	.overlay
+		+pos(fix, 0 null 0 0)
+		right: 0
+		z-index: 800
+		background: $black
+		opacity: 0.8
+		display: none
+	.menu
+		+media-breakpoint-down(lg)
+			+pos(fix, 0 null 0 0)
+			width: 280px
+			background: $white
+			z-index: 1000
+			+transform(translateX(-100%))
+			+transition(all,0.5s)
+			&.open
+				+transform(translateX(0))
+		.menu-logo
+			display: none
+			+media-breakpoint-down(lg)
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				background: $green
+				.sitelogo
+					margin-left: 0
+					height: 150px
+					img
+						height: 60px
+		.menu-wrap
+		ul.menu-link
+			+flexbox
+			align-items: center
+			align-content: center
+			// height: 90px
+			+media-breakpoint-down(lg)
+				display: block
+				// height: auto
+				padding: 10px 0
+			> li
+				+media-breakpoint-down(lg)
+					width: 100%
+					border-bottom: 1px solid darken($white,10%)
+					&:last-child
+						border-bottom: none
+				+ li
+					margin-left: 80px
+					@media (max-width: 1440px)
+						margin-left: 40px
+					+media-breakpoint-down(lg)
+						margin-left: 0
+				> a
+					display: block
+					+fs(18rem)
+					font-weight: 500
+					color: $white
+					text-transform: uppercase
+					line-height: 20px
+					padding: 35px 0
+					+media-breakpoint-down(lg)
+						padding: 15px 20px
+						color: $main
+						+fs(15rem)
+				&.has-mega
+					.mega
+						+pos(abs,100% 0 null 0)
+						background: color-rgba($green,0.95)
+						padding: 40px 0
+						display: none
+						.mega-wrap
+							width: 800px
+							margin: 0 auto
+						.mega-col
+							padding-top: 30px
+						.mega-title
+							+fs(18rem)
+							font-weight: 700
+							text-transform: uppercase
+							margin-bottom: 20px
+							color: $white
+						ul.mega-link
+							li
+								margin-bottom: 10px
+								a
+									+fs(17rem)
+									color: $white
+									opacity: 0.8
+									&:hover
+										opacity: 1
+					&:hover
+						+media-breakpoint-up(xl)
+							.mega
+								display: block
+	.col-right
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: flex-end
+		+media-breakpoint-down(lg)
+			flex: auto
+	.search
+		+pos(rel,null)
+		.search-toggle
+			color: $white 
+			+fs(22rem)
+			cursor: pointer
+		.searchbox
+			+pos(abs,-13px -11px null null)
+			border: 1px solid darken($white,60%)
+			background: $green
+			width: 250px
+			height: 50px
+			+flexbox
+			align-items: center
+			align-content: center
+			+transition(all,0.5s)
+			visibility: hidden
+			opacity: 0
+			input
+				width: calc(100% - 40px)
+				border: none
+				background: none
+				+fs(14rem)
+				color: $white
+				padding: 0px 20px
+				font-style: italic
+			.searchbutton
+				width: 40px
+				text-align: center
+				color: $yellow
+				+fs(22rem)
+		&:hover
+			.searchbox
+				visibility: visible
+				opacity: 1
+	.user
+		margin-left: 20px
+		+pos(rel,null)
+		.login-toggle
+			+fs(22rem)
+			color: $white
+			cursor: pointer
+		.login-popup
+			padding: 30px 10px
+			background: #ebebeb
+			min-width: 520px
+			margin-top: 50px
+			+pos(abs, 100% -50px null null)
+			box-shadow: 0px 3px 10px color-rgba($black,0.1)
+			display: none
+		.login-panel
+			+flexbox
+			&:before
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border: 10px solid transparent
+				border-top: none
+				border-bottom-color: #ebebeb
+				+pos(abs, null 50px 100% null)
+			.headtitle 
+				+fs(16rem)
+				font-weight: 500
+				text-transform: uppercase
+				margin-bottom: 15px
+			.module-title
+				+fs(13rem)
+				color: darken($white,40%)
+				margin-bottom: 104px
+			.login-form, .register-form
+				padding: 0px 15px
+				width: 50%
+				+pos(rel,null)
+			.register-form
+				&:before
+					content: ''
+					display: block
+					width: 1px
+					height: 140px
+					background: color-rgba($black,0.2)
+					+pos(abs, 40px null null 0)
+			.form-group
+				margin-bottom: 0
+				label
+					+fs(13rem)
+					text-transform: uppercase
+					color: darken($white,40%)
+				input
+					line-height: 18px
+					+fs(14rem)
+					padding: 0.625rem 1.25rem
+					+bor-rad(0)
+					border: 1px solid darken($white,20%)
+					background: $white
+			a.forget-password
+				color: $green
+				+fs(13rem)
+				margin-bottom: 10px
+				display: inline-block
+				border-bottom: 1px solid $green
+			.frm-btn
+				padding-top: 10px
+			input[type="submit"], .btn-register
+				display: inline-block
+				width: auto
+				background: $green
+				color: $white
+				text-transform: uppercase
+				+fs(13rem)
+				padding: 0px 20px
+				line-height: 36px
+				border: none
+				&:hover
+					background: lighten($green,10%)
+			
+	.cart
+		margin-left: 20px
+		.cart-toggle
+			+pos(rel,null)
+			color: $white
+			+fs(22rem)
+			.cart-amount
+				background: $red
+				line-height: 16px
+				padding: 0px 5px
+				+fs(11rem)
+				+bor-rad(50px)
+				+pos(abs, -3px -10px null null)
+
